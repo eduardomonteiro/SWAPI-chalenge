@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  swapi_based_resupply_distance:
+    image: ${DOCKER_REGISTRY-}swapibasedresupplydistance
+    build:
+      context: .
+      dockerfile: swapi_based_resupply_distance\Dockerfile
+    networks:
+      vpcbr:
+        ipv4_address: 10.1.0.5
+
+  redis:
+    image: redis
+    ports:
+      - "16379:6379"
+    networks:
+      vpcbr:
+        ipv4_address: 10.1.0.6
+
+networks:
+  vpcbr:
+    ipam:
+     config:
+       - subnet: 10.1.0.0/16

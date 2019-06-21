@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  swapi_based_resupply_distance:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+networks:
+  default:
+    external:
+      name: nat
