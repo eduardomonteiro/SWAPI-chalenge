@@ -3,7 +3,6 @@ using swapi_based_resupply_distance.Interfaces;
 using swapi_based_resupply_distance.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace swapi_based_resupply_distance.Services
 {
@@ -19,7 +18,13 @@ namespace swapi_based_resupply_distance.Services
 			this.redis = redis;
 		}
 
-		public  void GetAll()
+		public void SetAllOnRedis()
+		{
+			var starships = GetAllFromApi();
+			redis.SaveStarshipsFromApi(starships);
+		}
+
+		public List<Starship> GetAllFromApi()
 		{
 			var api = new StarWarsAPIClient();
 
@@ -29,17 +34,17 @@ namespace swapi_based_resupply_distance.Services
 
 			while (true)
 			{
-				var page =  api.GetAllStarship((++pageNo).ToString());
+				var page = api.GetAllStarship((++pageNo).ToString());
 
 				starships.AddRange(page.Result.results.Select(x => mapper.GetStarship(x)));
 
 				if (!page.Result.isNext)
+				{
 					break;
+				}
 			}
 
-			redis.SaveStarshipsFromApi(starships);
-
-			//return starships;
+			return starships;
 		}
 	}
 }

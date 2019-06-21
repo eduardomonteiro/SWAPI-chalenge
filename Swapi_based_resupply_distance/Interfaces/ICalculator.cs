@@ -11,7 +11,8 @@ namespace swapi_based_resupply_distance.Interfaces
 
         long ToHours( Duration duration );
 
-		Task<List<Starship>> ResupplyCalculation(long distance);
+		Task<List<Starship>> ResupplyCalculation(long distance, List<Starship> starships);
 
+		Task<List<Starship>> ResupplyCalculationFromCache(long distance);
 	}
 }

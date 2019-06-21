@@ -11,7 +11,7 @@ namespace swapi_based_resupply_distance.Services
 		public Duration ParseDuration(string consumables)
 		{
 			if (string.IsNullOrEmpty(consumables))
-				throw new ArgumentNullException(nameof(consumables));
+				return new Duration(TimeUnit.Unknown, -1);
 
 			var parts = consumables.Split(' ');
 

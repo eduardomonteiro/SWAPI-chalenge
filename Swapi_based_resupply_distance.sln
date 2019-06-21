@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PopulateDataFromJson", "Pop
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{749FADA1-B2D4-4CB4-AD7E-908BFC10645F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi_based_resupply_distance.tests", "..\Swapi_based_resupply_distance.tests\Swapi_based_resupply_distance.tests.csproj", "{5F2E2333-EAF3-4FB0-9BC9-3BADB4859F63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi_based_resupply_distance.tests", "Swapi_based_resupply_distance.tests\Swapi_based_resupply_distance.tests.csproj", "{5F2E2333-EAF3-4FB0-9BC9-3BADB4859F63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

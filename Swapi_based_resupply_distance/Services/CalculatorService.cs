@@ -17,10 +17,8 @@ namespace swapi_based_resupply_distance.Services
 			this.redis = redis;
 		}
 
-		public async Task<List<Starship>> ResupplyCalculation(long distance)
+		public async Task<List<Starship>> ResupplyCalculation(long distance, List<Starship> starships)
 		{
-			var starships = await redis.GetAll();
-
 			if (starships == null)
 				throw new ArgumentNullException(nameof(starships));
 
@@ -28,7 +26,6 @@ namespace swapi_based_resupply_distance.Services
 			{
 				if (starship.MGLT == -1)
 				{
-					//logger.Error($"Unknown speed for: {starship.Name}");
 					continue;
 				}
 
@@ -38,8 +35,16 @@ namespace swapi_based_resupply_distance.Services
 				// finaly calculate total number of stops required based on the distance, speed and time
 				var stops = ToStops(distance, starship.MGLT, hours);
 				starship.ResupplyFrequency = stops;
-				//logger.Info($"{starship.Name} needs to stop: ", stops);
 			}
+
+			return starships;
+		}
+
+		public async Task<List<Starship>> ResupplyCalculationFromCache(long distance)
+		{
+			var starships = await redis.GetAll();
+
+			await this.ResupplyCalculation(distance, starships);
 
 			return starships;
 		}
@@ -52,7 +57,7 @@ namespace swapi_based_resupply_distance.Services
 		public long ToHours(Duration duration)
 		{
 			if (duration == null)
-				throw new ArgumentNullException(nameof(duration));
+				return 0;
 
 			switch (duration.Unit)
 			{

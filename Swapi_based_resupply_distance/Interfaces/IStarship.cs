@@ -7,6 +7,7 @@ namespace swapi_based_resupply_distance.Interfaces
 	//named like this to not conflict with StarWarsAPI
 	public interface IStarship
 	{
-		void GetAll();
+		void SetAllOnRedis();
+		List<Starship> GetAllFromApi();
 	}
 }

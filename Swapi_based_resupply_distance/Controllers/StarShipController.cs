@@ -21,7 +21,7 @@ namespace swapi_based_resupply_distance.Controllers
 			this.redis = redis;
 			this.calculatorService = calculatorService;
 			this.starshipService = starshipService;
-			this.starshipService.GetAll();
+			this.starshipService.SetAllOnRedis();
 		}
 
 		// GET api/Starship
@@ -30,7 +30,7 @@ namespace swapi_based_resupply_distance.Controllers
 		[EnableCors]
 		public async Task<List<Starship>> Get(long distance)
 		{
-			var starships = await this.calculatorService.ResupplyCalculation(distance);
+			var starships = await this.calculatorService.ResupplyCalculationFromCache(distance);
 			redis.ClearData();
 			return starships;
 		}
