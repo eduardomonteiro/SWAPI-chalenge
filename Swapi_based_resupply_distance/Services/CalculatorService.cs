@@ -59,7 +59,7 @@ namespace swapi_based_resupply_distance.Services
 			if (duration == null)
 				return 0;
 
-			switch (duration.Unit)
+ 			switch (duration.Unit)
 			{
 				case TimeUnit.Day:
 					return 24 * duration.Time;
