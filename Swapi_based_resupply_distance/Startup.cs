@@ -29,10 +29,11 @@ namespace swapi_based_resupply_distance
 				options.AddPolicy(MyAllowSpecificOrigins,
 				builder =>
 				{
-					builder.WithOrigins("http://10.5.0.5",
-										"https://10.5.0.5")
-								.AllowAnyHeader()
-								.AllowAnyMethod(); ;
+					builder.WithOrigins("http://10.1.0.5", "http://10.1.0.4", "http://localhost:3000")
+						.AllowAnyOrigin()
+						.AllowAnyMethod()
+						.AllowAnyHeader()
+						.AllowCredentials();		
 				});
 			});
 
