@@ -1,6 +1,6 @@
 # SWAPI Challenge
 
-Project developed to know for all S.W. starships and how many stops for resupply are required to cover a given distance.
+It is a basic application in .NET Core that lists all the ships and through an entry of a distance in MGLT to be traversed. The API list all starships and calculates how many refueling will need to travel that distance.
 
 ### Prerequisites
 
@@ -16,46 +16,25 @@ If it is not, just run the docker-compose via terminal, being able to access the
 
 The test project is named 'Swapi_based_resupply_distance.tests', if you are using Visual Studio, simply go to the Test> Run> All Tests tab and follow the results in the 'Test Explorer' window.
 
-![Test Explorer](http://url/to/img.png)
+![Test Explorer](https://github.com/eduardomonteiro/SWAPI-chalenge/blob/master/img/te.PNG?raw=true)
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [ASP.NET Core](https://get.asp.net/) and [C#](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)for cross-platform server-side code
+* [Redis](https://redis.io/) in-memory data structure store, used as a database
+* [React](https://facebook.github.io/react/) and [Redux](https://redux.js.org/) for client-side code
+* [Bootstrap](http://getbootstrap.com/)Bootstrap for layout and styling
+* [OData](https://www.odata.org/), is one of the best practices for building and consuming RESTful API
+* [SWAPI](https://swapi.co/) used to consume the data that will be handled in this application
+* [Docker](https://www.docker.com/) used to build the cluster needed to connect and run the servers of all technologies used in a simple way is fast
 
-## Contributing
+## Author
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* **Eduardo Monteiro** - [SWAPI-chalenge](https://github.com/eduardomonteiro/)
 
-## Versioning
+## Urls
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+[Web Site](http://10.1.0.4/)
+[API](http://10.1.0.5/api/starship)
+[Redis Server](http://10.1.0.6/)
