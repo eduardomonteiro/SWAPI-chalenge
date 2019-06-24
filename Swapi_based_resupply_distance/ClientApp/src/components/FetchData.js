@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { actionCreators } from '../store/SwapiForecasts';
 
 let distance = 0;
@@ -20,7 +19,7 @@ class FetchData extends Component {
   }
 
   handleChange = function(e) {
-    this.state={value: e.target.value};;
+    this.state={value: e.target.value};
   }
 
   handleClick = function(e) {

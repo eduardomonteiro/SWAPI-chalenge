@@ -9,7 +9,7 @@ const HOST = '10.1.0.4';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('SwapiChalenge\n');
+  res.send('SwapiChallenge\n');
 });
 
 app.listen(PORT, HOST);

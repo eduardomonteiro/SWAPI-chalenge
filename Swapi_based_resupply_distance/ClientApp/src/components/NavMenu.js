@@ -8,7 +8,7 @@ export default props => (
   <Navbar inverse fixedTop fluid collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to={'/'}>SwapiChalenge</Link>
+        <Link to={'/'}>SwapiChallenge</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>

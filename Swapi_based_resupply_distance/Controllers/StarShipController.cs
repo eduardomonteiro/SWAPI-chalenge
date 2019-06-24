@@ -74,24 +74,5 @@ namespace swapi_based_resupply_distance.Controllers
 
 			return "`{Redis is empty!}";
 		}
-
-
-		//// POST api/Starship
-		//[HttpPost]
-		//public void Post([FromBody] string value)
-		//{
-		//}
-
-		//// PUT api/Starship/5
-		//[HttpPut("{id}")]
-		//public void Put(int id, [FromBody] string value)
-		//{
-		//}
-
-		//// DELETE api/Starship/5
-		//[HttpDelete("{id}")]
-		//public void Delete(int id)
-		//{
-		//}
 	}
 }

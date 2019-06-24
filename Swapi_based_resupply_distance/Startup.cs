@@ -13,6 +13,8 @@ namespace swapi_based_resupply_distance
 {
 	public class Startup
 	{
+		//{Scheme}://{ServiceIPAddress}{ServicePort}/api/starship
+		//docker compose code to open a url API dyn.
 		readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 		public Startup(IConfiguration configuration)
 		{

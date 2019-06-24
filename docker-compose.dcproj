@@ -5,7 +5,7 @@
     <DockerTargetOS>Windows</DockerTargetOS>
     <ProjectGuid>749fada1-b2d4-4cb4-ad7e-908bfc10645f</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}/api/values</DockerServiceUrl>
+    <DockerServiceUrl>http://10.1.0.4</DockerServiceUrl>
     <DockerServiceName>swapi_based_resupply_distance</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
