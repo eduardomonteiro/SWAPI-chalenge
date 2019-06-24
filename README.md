@@ -6,7 +6,7 @@ It is a basic application in .NET Core that lists all the ships and through an e
 
 Having docker installed and an IDE (my preference is Visual Studio 2017+)
 
-### Installing
+### How to Run
 
 If you are running through Visual Studio, just make sure that the project selected for execution is docker-compose and give play in the debug.
 
