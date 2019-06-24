@@ -2,6 +2,7 @@
   "name": "SwapiChalenge",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "bootstrap": "^3.4.1",
     "react": "^16.0.0",

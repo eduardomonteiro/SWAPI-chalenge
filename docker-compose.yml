@@ -18,6 +18,18 @@ services:
       vpcbr:
         ipv4_address: 10.1.0.6
 
+  SwapiChalenge:
+    container_name: SwapiChalenge
+    image: node
+    ports:
+      - "80:3000"
+    build:
+      context: .
+      dockerfile: swapi_based_resupply_distance\ClientApp\Dockerfile
+    networks:
+      vpcbr:
+        ipv4_address: 10.1.0.4
+
 networks:
   vpcbr:
     ipam:
